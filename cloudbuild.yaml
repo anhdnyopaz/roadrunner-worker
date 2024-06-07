@@ -26,7 +26,7 @@ steps:
 secrets:
   - kmsKeyName: projects/YOUR_PROJECT_ID/locations/global/keyRings/gce_keyring/cryptoKeys/gce_key
     secretEnv:
-      SSH_PRIVATE_KEY: CiQACVkw7bFrJpK6v9L5a4oaN/FrUS4eNjfsTF++K7fgoi0U090S6BQAiCYlJx87wEKM6EhtsvNT
+      SSH_PRIVATE_KEY: "CiQACVkw7bFrJpK6v9L5a4oaN/FrUS4eNjfsTF++K7fgoi0U090S6BQAiCYlJx87wEKM6EhtsvNT
   tQ9tYE+yG4zlU3kgBgdmJKBmH2xAWWtE2at6v0SZMjJE5EEHOdtySXwcxfrx4ERnc+fFzb9/M0kz
   DXK/xC65WjAaqNuCKaqvVyribhgntH4uH1z5BygiQIT7P1Cursfg6hoPUSxwhQ2f/qz8xW4MvuMW
   C3YVXkBOozPojNrbvRJJ+oTkG+ABQ16tGsCXz3oz6isaP/EFiCAn9uyLcU/0DR5kf87EgPczAPJw
@@ -73,6 +73,6 @@ secrets:
   QKqgOxD+EXMSbxNCf1tBQ3uddkm6r7LIraHEW9UUitIMY/9EAqbn9sciZi3RAGP1y2JrwPNIlHWF
   r3a9Vz5x1ijTShVYdtRYd+7iS9dQDTK9Cg7yPvUHWczgQDbG/4mAKPNeOuqsvS+yGZVKOiJUeIDU
   u9hAvH0RkDEkNOBzhd0PqknS4Ks7UJ7rEaNzbXAi372cN7/C+SG57QRfdSx/f1WDpB8CbshPXxKX
-  vQXAGzh6tbK98GHYy2F/8TLCt8v+1B+yods=
+  vQXAGzh6tbK98GHYy2F/8TLCt8v+1B+yods="
 
 timeout: '1200s'
