@@ -1,0 +1,78 @@
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        # Cài đặt SSH Key để sử dụng trong quá trình deploy
+        echo $SSH_PRIVATE_KEY | base64 --decode > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
+        # Bỏ qua kiểm tra host key (không khuyến khích cho sản xuất)
+        echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
+        # Chạy các lệnh sau khi tải lên nếu cần
+        ssh user@remote_server "cd /var/www/roadrunner-worker && ./deploy.sh"
+
+  # Tùy chọn: Xóa SSH key sau khi sử dụng
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        rm ~/.ssh/id_rsa
+
+# Mã hóa SSH Private Key
+secrets:
+  - kmsKeyName: projects/YOUR_PROJECT_ID/locations/global/keyRings/gce_keyring/cryptoKeys/gce_key
+    secretEnv:
+      SSH_PRIVATE_KEY: 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
+  vQXAGzh6tbK98GHYy2F/8TLCt8v+1B+yods=
+
+timeout: '1200s'
