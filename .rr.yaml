@@ -1,0 +1,18 @@
+version: "3"
+rpc:
+  listen: tcp://127.0.0.1:6001
+server:
+  command: "php index.php"
+
+#http:
+#  address: 0.0.0.0:8080
+grpc:
+  listen: tcp://0.0.0.0:9001
+  proto:
+    - ./proto/example.proto
+  services:
+      Service\*: { }
+# do not use development mode in production
+logs:
+  level: debug
+  mode: development

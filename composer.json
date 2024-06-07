@@ -1,0 +1,17 @@
+{
+    "name": "ngocanhduong/roadrunner-worker",
+    "description": "PHP Roadrunner Example",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "spiral/roadrunner-cli": "^2.6",
+        "nyholm/psr7": "^1.8",
+        "spiral/roadrunner-http": "^3.5",
+        "grpc/grpc": "^1.57",
+        "spiral/roadrunner-grpc": "^3.3"
+    }
+}
