@@ -4,8 +4,8 @@ rpc:
 server:
   command: "php index.php"
 
-#http:
-#  address: 0.0.0.0:8080
+http:
+  address: 0.0.0.0:8080
 grpc:
   listen: tcp://0.0.0.0:9001
   proto:
