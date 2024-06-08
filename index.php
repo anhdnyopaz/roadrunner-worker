@@ -13,14 +13,14 @@ $worker = Worker::create();
 $factory = new Psr17Factory();
 
 $psr7 = new PSR7Worker($worker,$factory,$factory,$factory);
-
-$server = new Server(new Invoker(),[
-    'debug' => true,
-]);
-
-$server->registerService(\Example\ExampleServiceInterface::class, new \Services\ExampleService());
-
-$server->serve(Worker::create());
+//
+//$server = new Server(new Invoker(),[
+//    'debug' => true,
+//]);
+//
+//$server->registerService(\Example\ExampleServiceInterface::class, new \Services\ExampleService());
+//
+//$server->serve(Worker::create());
 
 while (true) {
     try {
